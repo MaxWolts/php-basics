@@ -1,5 +1,9 @@
 <?php
-$title = "this a title very long";
+require_once __DIR__ . '/vendor/autoload.php';
+
+use App\StateType;
+
+$state = StateType::READY;
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +16,8 @@ $title = "this a title very long";
 </head>
 
 <body>
-    <h1> <?= $title ?> </h1>
+    <p><?php echo StateType::WAITING->value ?></p>
+    <p><?= $state->labelOrOtherName() ?></p>
 </body>
 
 </html>

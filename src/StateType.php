@@ -1,4 +1,7 @@
 <?php
+
+namespace App;
+
 enum StateType: string
 {
     case READY = 'Ready';
